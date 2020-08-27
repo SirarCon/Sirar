@@ -1,0 +1,370 @@
+.alertaPop{
+    & > div:first-child > div:first-child > div:first-child > div:first-child{
+        padding: 10px 10px !important;
+    }
+    .MuiTypography-title-8{
+        font-family: $fontMedium;
+    }
+    .alertaPopTitulo{
+        @extend .textoGrande;
+        text-transform: uppercase;
+        letter-spacing: 5px !important;
+    }
+    .alertaPopMensaje{
+        @extend .textoRegular;
+        margin-bottom: 0;
+    }
+    .MuiDialogContent-root-27{
+        padding: 0 24px 15px !important;
+    }
+    .alertaPopBotones{
+        background-color: white;
+        padding: 0;
+        width: 25%;
+        border-radius: 2px !important; 
+        height: 36px !important;
+        font-size: 14px;
+    }
+    .alertaPopAceptar{
+        @extend .botonAceptar;
+        @extend .alertaPopBotones;
+        margin-right: 5%;
+    }
+    .alertaPopCancelar{
+        @extend .botonCancelar;
+        @extend .alertaPopBotones;
+    }
+    a{
+        color: rgba(0, 0, 0, 0.54);
+    }
+}
+
+.alertaFases{
+    z-index: 100 !important;
+    h6{
+        @extend .textoMediano;
+        text-transform: uppercase;
+        letter-spacing: 5px !important;
+        font-size: 1rem !important;
+    }
+    & > div:first-child > div:first-child{
+        width: 50% !important;
+    }
+    .buttonFase{
+        width: 100%;
+        @extend .textoMediano;
+        &:hover{
+            background-color: $azulFuerte;
+            color: white;
+        }
+    }
+    .enVivo:hover{
+        background-color: $verdeExito;
+    }
+    .buttonCerrarFases{
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        height: 35px;
+        width: 35px;
+        min-width: 0;
+        background-color: $rojoPrincipal;
+        color: white;
+        border-radius: 50%; 
+        border-color: $rojoPrincipal;
+        outline: none;
+        cursor: pointer;
+        i{
+            pointer-events: none;
+        }
+        &:hover{
+            background-color: $rojoPrincipal;
+        }
+    }
+}
+
+.alertaEventos{
+    @extend .alertaFases;
+    &>div:first-child{
+        &>div:first-child{
+            &>div:first-child{
+                &>div:first-child{
+                    overflow-y: auto !important;
+                }
+            }
+        }
+    }
+}
+
+.federacionMasDetalle{
+    &>div:first-child{
+        &>div:first-child{
+            &>div:first-child{
+                &>div:first-child{
+                    overflow-y: auto !important;
+                }
+            }
+        }
+    }
+    .alertaPopCancelar{
+        position: absolute;
+        right: 30px;
+        width: fit-content !important;
+    }
+}
+
+.alertaEquipos{
+    z-index: 100 !important;
+    h6{
+        @extend .textoMediano;
+        text-transform: uppercase;
+        letter-spacing: 5px !important;
+        font-size: 1rem !important;
+    }
+    &>div:first-child{
+        &>div:first-child{
+            max-width: 500px !important;
+            &>div:first-child{
+                &>div:first-child{
+                    overflow-y: auto !important;
+                }
+            }
+        }
+    }
+    .alertaPopCancelar{
+        position: absolute;
+        right: 35px;
+        width: 100px !important;
+        top: 20px;
+    }
+    .listaAtletas{
+        height: fit-content;
+        max-height: 300px;
+        overflow-y: auto;
+        .atleta{
+            border-bottom: 0.5px solid $azulFuerte;
+            position: relative;
+            .ancho{
+                width: 100% !important;
+            }
+            .buttonAtleta{
+                width: calc(100% - 35px);
+                text-align: left;
+                border-radius: 0;
+                @extend .textoMediano;
+                &:hover{
+                    background-color: $azulFuerte;
+                    color: white;
+                }
+                span{
+                    display: block !important;
+                }
+            }
+            .buttonEliminar{
+                position: absolute;
+                height: 34px;
+                width: 35px;
+                right: 0;
+                //background-color: $rojoPrincipal;
+                color: $rojoPrincipal;
+                //border-color: $rojoPrincipal;
+                border: none;
+                background-color: white;
+                outline: none;
+                z-index: 10;
+                cursor: pointer;
+                -webkit-transition: all 0.5s ease !important;
+                transition: all 0.5s ease !important;
+                i{
+                    pointer-events: none;
+                }
+                &:hover{
+                    background-color: $rojoPrincipal;
+                    color: white;
+                }
+            }
+        }
+        .sinResultados{
+            text-align: center;
+        }
+    }
+    .formAgregarAtleta{
+        .contenedor{
+            margin-top: 40px;
+            .selectControl{
+                width: 100%;
+                label{
+                    top: -5px !important;
+                    font-size: 14px;
+                }
+                select{
+                    font-size: 14px;
+                }
+                & > div{
+                    top: -8px;
+                }
+                input, label{
+                    font-family: $fontRegular !important;
+                    letter-spacing: 1.5px;
+                }
+            }
+            .botonAgregarU{
+                float: left;
+                box-shadow: none !important;
+                min-width: 0 !important;
+                width: 100% !important;
+                -webkit-transition: all 0.5s ease !important;
+                transition: all 0.5s ease !important;
+                margin-bottom: 50px;
+                button{
+                    @extend .botonAceptar;
+                }
+            }
+        }
+        p{
+            width: 100%;
+            text-align: center;
+            margin: 40px 0;
+        }
+    }
+}
+
+.atletaMasDetalle{
+    &>div:first-child{
+        &>div:first-child{
+            &>div:first-child{
+                overflow-y: auto;
+                max-height: calc(100vh - 200px);
+                &>div:first-child{
+                    max-height: 2000px !important;
+                }
+            }
+        }
+    }
+    .alertaPopCancelar{
+        position: absolute;
+        right: 30px;
+        width: fit-content !important;
+    }
+}
+
+.alertaAgregarPart{
+    label{
+        font-family: $fontRegular !important;
+        letter-spacing: 1.5px;
+    }
+    &>div:first-child{
+        &>div:first-child{
+            &>div:first-child{
+                height: 340px;
+                .MuiDialogTitle-root{
+                    height: 35px;
+                }
+                .MuiDialogContent-root{
+                    overflow-y: hidden;
+                    height: 230px;
+                }
+            }
+        }
+    }
+    .css-26l3qy-menu{
+        overflow-y: auto;
+        max-height: 140px;
+    }
+    .alertaPopCancelar{
+        position: absolute;
+        right: 30px;
+        width: fit-content !important;
+    }
+    .botonAgregarU{
+        float: left;
+        box-shadow: none !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        -webkit-transition: all 0.5s ease !important;
+        transition: all 0.5s ease !important;
+        margin-top: 25px;
+        button{
+            @extend .botonAceptar;
+        }
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .alertaPopBotones{
+        font-size: 12px !important;
+        width: 45% !important;
+    }
+    .alertaFases{
+        & > div:first-child > div:first-child{
+            width: 75% !important;
+        }
+    }
+    .atletaMasDetalle{
+        &>div:first-child{
+            &>div:first-child{
+                &>div:first-child{
+                    max-height: 100vh
+                }
+            }
+        }
+        .alertaPopCancelar{
+            width: fit-content !important;
+        }
+    }
+    .federacionMasDetalle{
+        .alertaPopCancelar{
+            width: fit-content !important;
+        }
+    }
+    .alertaAgregarPart{
+        & > div:first-child > div:first-child{
+            width: 100% !important;
+            max-width: 100% !important;
+            transform: translate(0px, -15px) !important;
+        }
+        & > div:first-child > div:first-child > div:first-child > div:first-child{
+            height: 100vh !important;
+            max-height: 100vh !important;
+            overflow: auto !important;
+        }
+        &>div:first-child{
+            &>div:first-child{
+                &>div:first-child{
+                    height: 100vh !important;
+                    .MuiDialogContent-root{
+                        height: calc(100vh - 150px);
+                    }
+                }
+            }
+        }
+        .css-26l3qy-menu{
+            max-height: 200px !important;
+        }
+        .alertaPopCancelar{
+            width: fit-content !important;
+        }
+    }
+    .alertaEquipos{
+        padding-top: 15px !important;
+        & > div:first-child > div:first-child{
+            width: 100% !important;
+            max-width: 100% !important;
+            transform: translate(0px, -15px) !important;
+        }
+        & > div:first-child > div:first-child > div:first-child > div:first-child{
+            height: 100vh !important;
+            max-height: 100vh !important;
+            overflow: auto !important;
+        }
+        .listaAtletas{
+            max-height: calc(100vh - 300px) !important;
+        }
+        .listaAtletasLarga{
+            max-height: calc(100vh - 100px) !important;
+        }
+        .alertaPopCancelar{
+            width: 100px !important;
+        }
+    }
+}

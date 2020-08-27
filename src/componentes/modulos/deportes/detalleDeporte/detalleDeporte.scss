@@ -1,0 +1,350 @@
+#contenedorDetalleDeporte{
+    background-color: transparent;
+    margin-top: 100px;
+    #accionAtras{
+        margin-left: 20px;
+        width: 50px;
+        float: left;
+        height: 55px;
+        button{
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            color: $azulPrincipal;
+            cursor: pointer;
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+    #tituloRefrescar{
+        width: calc(100% - 70px);
+        float: right;
+        & p{
+            text-align: right;
+            margin-right: 10px;
+            & a:first-child{
+                cursor: pointer;
+            }
+            & a:last-child{
+                cursor: default;
+            }
+        }
+    }
+    #tabsPruebas{
+        width: 100%;
+        position: fixed;
+        top: 265px;
+        &>div:first-child{
+            &>div:first-child{
+                &>div:first-child{
+                    background-color: white !important;
+                }
+                &>div:nth-child(2){
+                    &>div:first-child{
+                        background-color: $azulFuerte !important;
+                    }
+                }
+            }
+        }
+    }
+    #cuerpoDetalleDeporte{
+        #encabezadoDeporte{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            #imgBorder{
+                height: fit-content;
+                width: fit-content;
+                background-color: white;
+                float: left;
+                left: 30px;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                .cover{
+                    max-height: 140px;
+                    height: auto;
+                    width: 140px;
+                    border-radius: 100%;
+                    margin: 5px;
+                }
+            }
+            #infoPersonalDeporte{
+                position: fixed;
+                top: 115px;
+                z-index: 10;
+                background-color: $azulPrincipal;
+                height: 150px;
+                width: 100vw;
+                #data{
+                    color: white;
+                    height: 160px;
+                    margin-left: 50px;
+                    #main{
+                        width: 95%;
+                        float: left;
+                        position: relative;
+                        top: 33px;
+                        p{
+                            text-transform: uppercase;
+                            letter-spacing: 5px !important;
+                            font-size: 15px;
+                        }
+                    }
+                }
+                .btnLeft, .btnRight{
+                    border: none;
+                    width: calc(100vw / 2);
+                    height: 40px;
+                    background-color: $azulPrincipal;
+                    border: 1px solid white;
+                    color: white;
+                    font-size: 10px;
+                    float: right;
+                    position: relative;
+                    text-transform: uppercase;
+                    letter-spacing: 2px !important;
+                    &:hover{
+                        background-color: $azulFuerte;
+                    }
+                }
+            }
+        }
+        #contenedorDerDeporte{
+            margin-top: 270px;//50px;
+            height: 100%;
+            width: 100%;
+            #infoPruebasDeporte{
+                #pruebasPorGenero{
+                    margin-top: 317px;
+                }
+                table{
+                    border-spacing: 0;
+                    margin: 0 auto;
+                    td{
+                        padding: 0;
+                    }
+                    .cardSkeleton{
+                        border-width: 0px !important;
+                    }
+                    .cardPrueba{
+                        background-color: white;
+                        height: 50px;
+                        width: 350px;
+                        margin: 10px; 
+                        position: relative;
+                        border: 2px solid $azulRegular;
+                        span{
+                            span{
+                                height: 100%;
+                                border-radius: 0;
+                                line-height: normal;
+                            }
+                        }
+                        #info{
+                            #nombre{
+                                @extend .textoMediano;
+                                position: absolute;
+                                top: 50%;
+                                right: 0;
+                                left: 0;
+                                height: fit-content;
+                                -ms-transform: translateY(-50%);
+                                transform: translateY(-50%);
+                                margin: 0 auto;
+                                width: calc(100% - 80px);
+                                text-align: center;
+                                cursor: pointer;
+                            }
+                            #iconoTipoPart{
+                                position: absolute;
+                                top: 33%;
+                                left: 5%;
+                            }
+                            .iconoTipoMarc{
+                                position: absolute;
+                                top: 33%;
+                                right: 5%;
+                                height: 20px;
+                                width: 20px;
+                            }
+                        }
+                        button{
+                            position: absolute;
+                            top: -12px;
+                            right: -12px;
+                            height: 30px;
+                            width: 30px;
+                            background-color: $rojoPrincipal;
+                            color: white;
+                            border-radius: 50%; 
+                            border-color: $rojoPrincipal;
+                            outline: none;
+                            cursor: pointer;
+                            i{
+                                pointer-events: none;
+                            }
+                        }
+                        &:hover{
+                            transform: scale(1.01);
+                        }
+                    }
+                    .desactivo{
+                        opacity: 0.4;
+                    }
+                }
+                .mensajeSinRegistros{
+                    margin: 0;
+                    line-height: calc(100vh - 450px);
+                }
+            }
+        }
+        .botonAgregarPrueba{
+            button{
+                background-color: $azulRegular !important;
+                opacity: 1;
+                position: fixed !important;
+                bottom: 50px;
+                right: 50px;
+                @extend .animacionScrollHeader;
+            }
+        }
+        .botonHabilitarEdicionPrueba{
+            button{
+                background-color: $rojoPrincipal !important;
+                opacity: 1;
+                position: fixed !important;
+                bottom: 50px;
+                right: 120px;
+                @extend .animacionScrollHeader;
+            }
+        }
+    }   
+}
+
+#modalFormPrueba{
+    position:absolute;
+    z-index: -1000;
+    min-height: 100vh;
+    height: fit-content;
+    width: 100%;
+    max-width: 900px;
+    top:0;
+    left:0;
+    background-color: white;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+    border-right: 0 solid $azulFuerte;
+    .botonCerrarForm{
+        position: fixed;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+@media only screen and (max-width: 830px){
+    #modalFormPrueba{
+        margin-top: -70px;
+        border-right-width: 0px;
+    }
+    .abrirModalForm{
+        z-index: 2000 !important;
+    }
+    #contenedorDetalleDeporte{
+        #cuerpoDetalleDeporte{
+            #encabezadoDeporte{
+                #imgBorder{
+                    left: 20px;
+                    .cover{
+                        max-height: 70px;
+                        width: 70px;
+                    }
+                }
+                #infoPersonalDeporte{
+                    height: 140px;
+                    #data{
+                        #main{
+                            width: 100%;
+                            p{
+                                margin: 10px 0;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    .btnLeft, .btnRight{
+                        top: 5px;
+                    }
+                }
+            }
+            #contenedorDerDeporte{
+                margin-top: 260px !important;//10px !important;
+                #infoPruebasDeporte{
+                    table{
+                        .cardPrueba{
+                            width: 90vw !important;
+                        }
+                    }
+                    .mensajeSinRegistros{
+                        margin-top: 50px;
+                        line-height: 30px;
+                    }
+                }
+            }
+            .botonAgregarPrueba{
+                display:  block !important;
+                button{
+                    bottom: 80px;
+                    right: 20px;
+                }
+            }
+            .botonHabilitarEdicionPrueba{
+                display:  block !important;
+                button{
+                    bottom: 80px;
+                    right: 90px;
+                }
+            }
+        }
+    }
+    .deporteMasDetalle{
+        & > div:first-child > div:first-child{
+            width: 100% !important;
+            max-width: 100% !important;
+            transform: translate(0px, -15px) !important;
+        }
+        & > div:first-child > div:first-child > div:first-child > div:first-child{
+            height: 100vh !important;
+            max-height: 100vh !important;
+            overflow: auto !important;
+        }
+    }
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    #contenedorDetalleDeporte{
+        #cuerpoDetalleDeporte{
+            #encabezadoDeporte{
+                #infoPersonalDeporte{
+                    margin-top: 58px;
+                }
+            }
+            #contenedorDerDeporte{
+                margin-top: 320px !important;
+            }
+        }
+        #tabsPruebas{
+            top: 310px !important;
+        }
+        #pruebasPorGenero{
+            margin-top: 360px !important;
+        }
+    }
+}

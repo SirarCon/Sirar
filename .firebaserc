@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "sirar-con"
+  },
+  "targets": {
+    "sirar-con": {
+      "hosting": {}
+    }
+  }
+}

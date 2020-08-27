@@ -1,0 +1,229 @@
+#contenedorFormEquipo{
+    background-color: transparent;
+    width: 80%;
+    max-width: 700px;
+    margin: 30px auto;
+    #formPerfil{
+        #inputs{
+            #fotoPerfil{
+                margin: 0 0 15px 0;
+                width: fit-content;
+                text-align: center;
+                img{
+                    border-radius: 5px; 
+                    height: 133px;
+                    width: 200px;
+                    font-size: 12px;
+                }
+                i{
+                    color: $azulFuerte;
+                    margin-left: 10px;
+                }
+                #inputFoto{
+                    display: none;
+                }
+            }
+            #idLabel{
+                p{
+                    color: $azulLiviano;
+                    font-size: 14px;
+                    text-align: right;
+                    display: none;
+                }
+            }
+            .grupoInputs{
+                margin-bottom: 5px;//15px; 
+                & > div{
+                    height: 43px !important;
+                    label{
+                        top: 15px !important;
+                    }
+                    input{
+                        margin-top: 1px !important;
+                    }
+                }
+                .selectControl{
+                    width: 100%;
+                    label{
+                        top: -5px !important;
+                        font-size: 14px;
+                    }
+                    select{
+                        font-size: 14px;
+                    }
+                    & > div{
+                        top: -8px;
+                    }
+                }
+            }
+            .grupoIzquierda{
+                width: 100%;
+                float: left;
+            }
+        }
+        input, label{
+            font-family: $fontRegular !important;
+            letter-spacing: 1.5px;
+        }
+        .switchForm{
+            //margin-bottom: 25px; 
+            p{
+                color: $azulFuerte;
+            }
+            .react-toggle{
+                float: right !important;
+                margin-top: -34px; 
+                .react-toggle-track{
+                    height: 15px;
+                    margin-top: 5px;
+                    width: 48px;
+                    margin-left: 1px; 
+                }
+                .react-toggle-thumb{
+                    box-shadow: none !important;
+                }
+            }
+        }
+        #grupoBotones{
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            .botonAgregarU{
+                float: left;
+                box-shadow: none !important;
+                min-width: 0 !important;
+                width: 100% !important;
+                -webkit-transition: all 0.5s ease !important;
+                transition: all 0.5s ease !important;
+                margin-bottom: 50px;
+                button{
+                    @extend .botonAceptar;
+                }
+            }
+            .botonEliminarU{
+                transform: scaleX(0);
+                float: right;
+                box-shadow: none !important;
+                min-width: 0 !important;
+                width: 0%; 
+                -webkit-transition: all 0.5s ease !important;
+                transition: all 0.5s ease !important;
+                button{
+                    @extend .botonCancelar;
+                }
+            }
+            /*
+            #contenedorSwitch{
+                margin-bottom: 25px; 
+                p{
+                    color: $azulFuerte;
+                }
+                .react-toggle{
+                    float: right !important;
+                    margin-top: -34px; 
+                    .react-toggle-track{
+                        height: 15px;
+                        margin-top: 5px;
+                        width: 48px;
+                        margin-left: 1px; 
+                    }
+                    .react-toggle-thumb{
+                        box-shadow: none !important;
+                    }
+                }
+            }*/
+        }
+        #contenedorRol{
+            margin-top: 10px;
+            background-color: $azulMuyLiviano;
+            height: 100% !important;
+            padding: 10px;
+            label p{
+                color: $azulFuerte;
+                float: left;
+                width: calc(100% - 50px);
+                margin: 5px 0;
+                font-size: 15px;
+            }
+            .react-toggle{
+                float: right !important;
+                margin-top: 3px; 
+                .react-toggle-track{
+                    height: 15px;
+                    margin-top: 5px;
+                    width: 48px;
+                    margin-left: 1px; 
+                }
+                .react-toggle-thumb{
+                    box-shadow: none !important;
+                }
+            }
+            #leyendaRoles{
+                width: calc(100% - 50px);
+                p{
+                    font-size: 11px;
+                    color: $grisNormal;
+                    margin: 3px 0;
+                }
+            }
+        }
+    }
+}
+.opcionesPopover{
+    padding: 0 !important;
+    div{
+        span{
+            color: $azulFuerte !important;
+            font-family: $fontRegular !important;
+            font-size: 14px !important;
+        }
+    }
+}
+// tablet y teléfono (landscape y portrait)
+@media only screen and (max-width: 830px){
+    #contenedorFormEquipo{
+        width: 85%;
+        margin: 5% auto 0 auto !important;
+        #formPerfil{
+            #inputs{
+                #fotoPerfil{
+                    width: fit-content;
+                    margin-bottom: 20px !important;
+                    img{
+                        height: 89px !important;
+                        width: 133px !important;
+                    }
+                }
+            }
+            #grupoBotones{
+                .botonAgregarU, .botonEliminarU{
+                    margin-bottom: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen  and (max-device-width: 830px) and (orientation: landscape) { 
+    /*#contenedorFormUsuario{
+        width: 90% !important;
+        #formPerfil{
+            #inputs{
+                #fotoPerfil{
+                    float: left !important;
+                    width: 30% !important;
+                }
+                #grupoInputs{
+                    float: right !important;
+                    width: 55% !important;
+                    margin: 0 5% 0 10% !important;
+                }
+            }
+            #grupoBotones{
+                position: fixed;
+                width: 15% !important;
+                bottom: 10%;
+            }
+        }
+    }*/
+}

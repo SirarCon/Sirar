@@ -1,0 +1,105 @@
+input{
+    font-size: 16px !important;
+}
+label{
+    font-size: 14px !important;
+}
+.selectControl{
+    .MuiFormLabel-root-10.MuiFormLabel-focused-11{
+        color: $azulFuerte;
+    }
+    .MuiInput-underline-26:after{
+        border-bottom-color: $azulFuerte;
+    }
+    .MuiInput-root-22 {
+        color: $azulFuerte;
+        @extend .textoMediano;
+    }
+    .MuiSelect-select-18:focus{
+        background-color: white;
+    }
+}
+.multiSelect{
+    margin-bottom: 6px;
+    height: fit-content !important;
+    .css-yk16xz-control{
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+        &:hover{
+            border-bottom: 1.5px solid #303f9f;
+        }
+    }
+    .css-1pahdxg-control{
+        box-shadow: none;
+        &:hover {
+            border: none;
+        }
+    }
+    .select__control--is-focused{
+        border: none;
+        box-shadow: none;
+    }
+    .css-1rhbuit-multiValue{
+        background-color: $azulRegular;
+        border-radius: 0px;
+        div{
+            color: white;
+            border-radius: 0px;
+            @extend .textoMediano;
+        }
+        .css-xb97g8:hover{
+            background-color: $rojoPrincipal;
+        }
+    }
+    .css-26l3qy-menu{
+        background-color: white;
+        opacity: 1;
+        z-index: 999;
+        @extend .textoMediano;
+        box-shadow: none;
+        border: 1px solid $azulFuerte;
+    }
+    .placeholder{
+        position: absolute;
+        z-index: 9;
+        label{
+            position: absolute;
+            color: rgba(0, 0, 0, 0.54);
+            top: 23px;
+            left: 1px;
+            transition: 0.2s ease all;
+        }
+    }
+    .select__placeholder{
+        z-index: 999;
+        bottom: 5px;
+        left: 1px;
+        margin-left: 0px;
+        @extend .textoRegular;
+        letter-spacing: 1.5px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.54);
+        display: block !important;
+    }
+    .select__input{
+        color: rgba(0, 0, 0, 0.87);
+    }
+    .select__value-container{
+        top: 6px;
+        padding: 6px 0;
+    }
+    .select__dropdown-indicator{
+        color: rgba(0, 0, 0, 0.54);
+        padding: 6px 4px;
+    }
+    .select__clear-indicator{
+        svg{
+            height: 17px;
+            width: 17px;
+        }
+    }
+    .select__indicators span{
+        display: none;
+    }
+}

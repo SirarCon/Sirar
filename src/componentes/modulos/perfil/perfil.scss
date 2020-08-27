@@ -1,0 +1,108 @@
+#contenedorPerfil{
+    background-color: white;
+    width: 100%;
+    #formPerfil{
+        margin-bottom: 20px; 
+        max-width: 400px;
+        #inputs{
+            margin-bottom: 30px;
+            #fotoPerfil{
+                margin: 0 auto 15px auto;
+                width: fit-content;
+                text-align: center;
+                img{
+                    border-radius: 50%;
+                    height: 110px;
+                    width: 110px;
+                    font-size: 12px;
+                }
+                i{
+                    color: $azulFuerte;
+                }
+                #inputFoto{
+                    display: none;
+                }
+            }
+        }
+        #inputsSkeleton{
+            margin-bottom: 30px;
+            #fotoSkeleton{
+                width: 120px;
+                height: 120px;
+                margin: 0 auto;
+                span{
+                    span{
+                        border-radius: 50%;
+                        width: 100%;
+                        height: 100%;
+                    }
+                } 
+            }
+            #cuerpoSkeleton{
+                margin-top: 17px;
+                span{
+                    margin-top: 40px;
+                    height: 30px;
+                }
+            }
+        }
+        input, label{
+            font-family: $fontMedium !important;
+            letter-spacing: 1.5px;
+        }
+        button{
+            @extend .botonAceptar;
+            span{
+                letter-spacing: 2px !important;
+            }
+        }
+    }
+}
+.opcionesPopover{
+    padding: 0 !important;
+    div{
+        span{
+            color: $azulFuerte !important;
+            font-family: $fontRegular !important;
+            font-size: 14px !important;
+        }
+    }
+}
+// tablet y teléfono (landscape y portrait)
+@media only screen and (max-width: 830px){
+    #contenedorPerfil{
+        #formPerfil{
+            padding-top: calc( 5% + 48px );
+            #inputs{
+                #fotoPerfil{
+                    margin-bottom: 0 !important;
+                    img{
+                        height: 100px !important;
+                        width: 100px !important;
+                    }
+                }
+            }
+            #inputsSkeleton{
+                #fotoSkeleton{
+                    width: 100px !important;
+                    height: 100px !important;
+                }
+                #cuerpoSkeleton{
+                    margin-top: 0px !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    #contenedorPerfil{
+        .tabs{
+            top: 120px !important;
+        }
+    }
+}

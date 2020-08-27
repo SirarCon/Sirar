@@ -1,0 +1,35 @@
+.textoTitulo{
+    font-family: $fontBold;
+}
+.textoSubtituloPrincipal{
+    font-family: $fontMedium;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+}
+.textoSubtituloSecundario{
+    font-family: $fontMedium;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+}
+.textoGrande{
+    font-family: $fontMedium !important;
+    letter-spacing: 3px !important;
+}
+.textoRegular{
+    font-family: $fontRegular !important;
+    font-size: 0.9rem !important;
+}
+.textoMediano{
+    font-family: $fontRegular !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 1px !important;
+}
+.textoPequenno{
+    font-family: $fontRegular !important;
+    font-size: 0.7rem !important;
+    letter-spacing: 1px;
+}
+.textoMuyPequenno{
+    font-family: $fontRegular !important;
+    font-size: 9px !important;
+}

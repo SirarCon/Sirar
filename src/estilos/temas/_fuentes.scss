@@ -1,0 +1,18 @@
+@font-face {
+    font-display: fallback;
+    font-family: "RalewayBold"; src: url("./fuentes/Raleway-Bold.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-display: fallback;
+    font-family: "RalewayMedium"; src: url("./fuentes/Raleway-Medium.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-display: fallback;
+    font-family: "RalewayRegular"; src: url("./fuentes/Raleway-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+$fontBold: "RalewayBold"; 
+$fontMedium: "RalewayMedium";
+$fontRegular: "RalewayRegular";

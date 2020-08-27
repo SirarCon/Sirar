@@ -1,0 +1,21 @@
+.cargador{
+    display: none;
+}
+.cargadorOverlay{
+    //background-color: rgba($color: lightgray, $alpha: 0.6) !important;
+    background-color: rgba($color: $azulFuerte, $alpha: 0.3) !important;
+}
+.cargadorModal{
+    text-align: center !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    & > div{
+        background-color: rgba($color: lightgray, $alpha: 0) !important;
+        box-shadow: none !important;
+    }
+    img{
+        //border: 1px solid rgba($color: lightgray, $alpha: 0.5);
+        max-width: 100% !important;
+        max-height: 100px !important;
+    }
+}

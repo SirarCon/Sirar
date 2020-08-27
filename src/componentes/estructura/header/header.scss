@@ -1,0 +1,259 @@
+$heightMenuShrink: 60px;
+$heightMenuNormal: 100px;
+
+.shrink{
+    @media only screen and (min-width: 830px){
+        height: $heightMenuShrink !important;
+        p{
+            line-height: $heightMenuShrink !important;
+        }
+        img{
+            height: $heightMenuShrink - 15px !important;
+            margin: 7.5px 0 !important; 
+        }
+        & > button{
+            line-height: $heightMenuShrink !important;
+        }
+    }
+}
+.appBar{
+    position: fixed !important;
+    top: 0;
+    background-color: rgba($color: $azulFuerte, $alpha: 1) !important;
+    //height: $heightMenuNormal;
+    height: $heightMenuShrink;
+    @extend .animacionScrollHeader;
+    & > div{
+        //height: $heightMenuNormal !important;
+        height: $heightMenuShrink !important;
+        color: white;
+        margin-top: 0 !important;
+        p{
+            //line-height: $heightMenuNormal;
+            line-height: $heightMenuShrink;
+            margin: 0 !important;
+            text-transform: uppercase;
+            @extend .textoMediano;
+            letter-spacing: 5px !important;
+            @extend .animacionScrollHeader;
+        } 
+    }
+    & > button{
+        @extend .animacionScrollHeader;
+        //line-height: $heightMenuNormal;
+        line-height: $heightMenuShrink;
+        margin-top: 12px !important;
+        padding: 0 !important;
+    }
+    img{
+        height: $heightMenuShrink - 15px;
+        margin: 7.5px 0; 
+        //margin: 12.5px 0;
+        //height: $heightMenuNormal - 25px;
+        opacity: 0.9;
+        @extend .animacionScrollHeader;
+    }
+    #tituloMovil{
+        display: none;
+        float: left;
+        line-height: 70px;
+        margin-top: 8px !important;
+    }
+}
+.drawer{
+    a{
+        text-decoration: none !important;
+    }
+    #perfilContenedor{
+        height: 180px;
+        background-color: $azulPrincipal;
+        text-align: left;
+        border-bottom: 1px solid white;
+        img{
+            margin-top: 25px;
+            height: 105px;
+            width: 105px;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            border-radius: 50%;
+            background-size: 100% auto;
+            color: white;
+            @extend .textoPequenno;
+        }
+        i{
+            float: right;
+            margin-top: 25px; 
+            color: white;
+        }
+        p{
+            margin: 0;
+            line-height: 25px;
+            color: white;
+            @extend .textoPequenno;
+            text-overflow: ellipsis;
+            overflow: hidden; 
+            white-space: nowrap;
+        }
+    }
+    #opcionesMenu{
+        margin-bottom: 80px;
+        a{
+            color: $azulFuerte !important;
+            & > div:first-child{
+                span{
+                    & > div:first-child{
+                        div{
+                            z-index: 1 !important;
+                        }
+                    }
+                }
+            }
+        }
+        span{
+            color: $azulFuerte !important;
+            font-family: $fontRegular !important;
+            letter-spacing: 1.5px !important;
+            font-size: 0.8rem !important;
+            min-height: 60px !important;
+            line-height: 60px !important;
+            i{
+                line-height: 60px !important;
+                margin: 0 12px 0 15px !important;
+            }
+        }
+        span:hover{
+            background-color: transparent !important;
+        }
+        & > div:first-child{
+            background-color: $azulPrincipal !important; 
+            span{
+                background-color: $azulPrincipal !important; 
+                color: white !important;
+                pointer-events: none;
+                min-height: 50px !important;
+                line-height: 50px !important;
+            }
+            height: 50px;
+            border-bottom: 1px solid $azulPrincipal;
+        }
+        & > div:last-child{
+            border-top: 2px solid $rojoPrincipal;
+            width: 100%;
+            span{
+                min-height: 48px !important;
+                line-height: 48px !important;
+                i{
+                    line-height: 48px !important;
+                    margin: 0 12px 0 15px !important;
+                }
+            }
+        }
+    }
+    #infoSistemaMenu{
+        width: 224px;
+        height: 50px;
+        text-align: left;
+        #comiteLeyenda{
+            letter-spacing: 2.7px !important;
+            @extend .textoMediano;
+            line-height: 50px;
+        }
+        #sistemaLeyenda{
+            text-transform: uppercase;
+            display: none;
+            line-height: 15px;
+            p{
+                letter-spacing: 2px;
+                @extend .textoMuyPequenno;
+            }
+        }
+        p{
+            margin: 0;
+            
+        }
+    }
+}
+// tablet y teléfono (landscape y portrait)
+@media only screen and (max-width: 830px){
+    .appBar{
+        height: 70px !important;
+        & > button{
+            //line-height: 70px !important;
+            margin-top: 25px !important;
+        }
+        & > div{
+            height: 70px !important;
+            text-align: right !important;
+        }
+        & > div:last-child{
+            display: none;
+        }
+        img{
+            margin:  20px 0 0 0;//7.5px 0;
+            height: 45px;//55px;
+        }
+        #tituloMovil{
+            display: block;
+        }
+    }
+    .drawer{
+        #opcionesMenu{
+            span{
+                min-height: 55px !important;
+                line-height: 55px !important;
+                i{
+                    line-height: 55px !important;
+                    margin: 0 12px 0 15px !important;
+                }
+            }
+            & > div:first-child{
+                padding-top: 10px;
+                height: 90px;
+            }
+        }
+        #infoSistemaMenu{
+            height: 70px;
+            #comiteLeyenda{
+                line-height: 30px !important;
+                padding-top: 10px;
+            }
+            #sistemaLeyenda{
+                display: block;
+            }
+        }
+    }
+}
+
+// iPhone X
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    body{ 
+        .appBar{
+            height: 120px !important;
+            div{
+                transform: translateY(40px);
+            }
+        }
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    body{
+        #opcionesMenu, #perfilContenedor{
+            span{
+                width: calc(100% - 70px) !important;
+                transform: translateX(35px) !important;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,366 @@
+#contenedorEventos{
+    background-color: white;
+    width: 100%;
+    #encabezadoEventos{
+        padding-top: 15px !important;
+        border-bottom: 2px solid $rojoPrincipal;
+        #tituloRefrescar{
+            float: right;
+            width: 200px;
+            p{
+                margin: 0 10px 0 0;
+                line-height: 48px;
+                float: right;
+                text-align: left;
+            }
+        }
+        & > div{
+            box-shadow: none !important;
+            width: 30%;
+            float: left;
+            margin: 0px auto 0 15px;
+        }
+        .barraBusquedaEventos{
+            border: 0px solid $rojoPrincipal;
+            div{
+                line-height: 20px !important;
+                font-family: $fontRegular !important;
+                font-size: 0.8rem !important;
+                letter-spacing: 1px !important;
+                text-transform: capitalize;
+            }
+            input{
+                margin-top: 6px !important;
+                height: 80% !important;
+                font-family: $fontRegular !important;
+                font-size: 0.8rem !important;
+                letter-spacing: 1px !important;
+            }
+        }
+        #filters{
+            position: absolute;
+            top: 8px;
+            width: 240px;
+            left: 32%;
+            height: 45px;
+            margin: 0;
+            border: 0px solid $rojoPrincipal;
+            border-width: 0 0 0 1px;
+            .form{
+                display: flex;
+                flex-wrap: wrap;
+                width: fit-content;
+                margin: 0 auto;
+                &>div:last-child{
+                    top: -4px;
+                }
+                .selectControl{
+                    min-width: 150px;
+                    margin: 15px 20px;
+                    label{
+                        font-size: 11px !important;
+                    }
+                }
+            }
+        }
+    }
+    .tabs{
+        width: 100%;
+        position: fixed;
+        top: 125px;
+        &>div:first-child{
+            &>div:first-child{
+                &>div:first-child{
+                    background-color: white !important;
+                }
+                &>div:nth-child(2){
+                    &>div:first-child{
+                        background-color: $azulFuerte !important;
+                    }
+                }
+            }
+        }
+    }
+    #cuerpoEventos{
+        width: 100vw;
+        padding-top: 170px;
+        background-color: white;
+        table{
+            border-spacing: 0;
+            margin: 0 auto;
+            td{
+                padding: 0;
+            }
+            .cardSkeleton{
+                border-width: 0px !important;
+            }
+            .cardEvento{
+                background-color: white;
+                height: 100px;
+                width: 400px;
+                margin: 10px; 
+                position: relative;
+                border: 0px solid $azulRegular;
+                border-width: 2px;
+                cursor: pointer;
+                span{
+                    span{
+                        height: 100%;
+                        border-radius: 0;
+                        line-height: normal;
+                    }
+                }
+                #info{
+                    height: 100%;
+                    .imgEvento{
+                        float: left;
+                        height: 100%;
+                        width: 150px;
+                        text-align: center;
+                        background-color: white;
+                        img{
+                            background-color: white;
+                            height: 85%;
+                            max-width: 80%;
+                            margin: 5%;
+                        }
+                    }
+                    .datosEvento{
+                        float: right;
+                        width: calc(100% - 150px);
+                        height: 100%;
+                        position: relative;
+                        #nombre, #pais{
+                            position: absolute;
+                            top: 30%;
+                            right: 0;
+                            left: 0;
+                            height: fit-content;
+                            -ms-transform: translateY(-50%);
+                            transform: translateY(-50%);
+                            @extend .textoMediano;
+                            text-align: center;
+                            width: 90%;
+                            margin: 0 auto;
+                            cursor: pointer;
+                            line-height: 20px;
+                        }
+                        #pais{
+                            top: auto;
+                            bottom: 10%;
+                        }
+                    }
+                    .datosEventoW{
+                        @extend .datosEvento;
+                        width: 100%;
+                    }
+                }
+                button{
+                    position: absolute;
+                    top: -12px;
+                    right: -12px;
+                    height: 30px;
+                    width: 30px;
+                    background-color: $rojoPrincipal;
+                    color: white;
+                    border-radius: 50%; 
+                    border-color: $rojoPrincipal;
+                    outline: none;
+                    cursor: pointer;
+                    i{
+                        pointer-events: none;
+                    }
+                }
+                &:hover{
+                    transform: scale(1.01);
+                }
+            }
+            .cardEvento1{
+                background-color: white;
+                height: 50px;
+                width: 200px;
+                margin: 10px; 
+                position: relative;
+                border: 2px solid $azulRegular;
+                span{
+                    span{
+                        height: 100%;
+                        border-radius: 0;
+                        line-height: normal;
+                    }
+                }
+                #info{
+                    #nombre{
+                        @extend .textoMediano;
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        left: 0;
+                        height: fit-content;
+                        -ms-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                        margin: auto 0;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                }
+                button{
+                    position: absolute;
+                    top: -12px;
+                    right: -12px;
+                    height: 30px;
+                    width: 30px;
+                    background-color: $rojoPrincipal;
+                    color: white;
+                    border-radius: 50%; 
+                    border-color: $rojoPrincipal;
+                    outline: none;
+                    cursor: pointer;
+                    i{
+                        pointer-events: none;
+                    }
+                }
+                &:hover{
+                    transform: scale(1.01);
+                }
+            }
+            .desactivo{
+                opacity: 0.4;
+            }
+        }
+        .mensajeSinRegistros{
+            margin: 0;
+            line-height: calc(100vh - 350px);
+        }
+        .botonAgregarEvento{
+            button{
+                background-color: $azulRegular !important;
+                opacity: 1;
+                position: fixed !important;
+                bottom: 50px;
+                right: 50px;
+                @extend .animacionScrollHeader;
+            }
+        }
+        .botonHabilitarEdicionEvento{
+            button{
+                background-color: $rojoPrincipal !important;
+                opacity: 1;
+                position: fixed !important;
+                bottom: 50px;
+                right: 120px;
+                @extend .animacionScrollHeader;
+            }
+        }
+    }
+}
+
+#modalFormEvento{
+    position:absolute;
+    z-index: -1000;
+    min-height: 100vh;
+    height: fit-content;
+    width: 100%;
+    max-width: 900px;
+    top:0;
+    left:0;
+    background-color: white;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+    border-right: 0 solid $azulFuerte;
+    .botonCerrarForm{
+        position: fixed;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+.abrirModalForm{
+    //z-index: 1500 !important;
+    z-index: 1299 !important;
+    transform: scale(1) !important;
+    border-right-width: 7px !important;
+}
+
+.cerrarModalForm{
+    z-index: -1000 !important;
+    transform: scale(0) !important;
+    border-right-width: 0px !important;
+}
+
+// tablet y teléfono (landscape y portrait)
+@media only screen and (max-width: 830px){
+    #modalFormEvento{
+        margin-top: -70px;
+        border-right-width: 0px;
+    }
+    .abrirModalForm{
+        z-index: 2000 !important;
+    }
+    #contenedorEventos{
+        #encabezadoEventos{
+            #tituloRefrescar{
+                display: none;
+            }
+            & > div{
+                width: 60%;
+                margin: 0;
+            }
+            .botonBusqAvanzada{
+                //width: 25% !important;
+                min-width: 0px !important;
+            }
+            #filters{
+                width: 40%;
+                left: auto;
+                right: 0;
+                .form{
+                    margin: 0 10px;
+                    .formControl{
+                        min-width: 120px;
+                        margin: 3px 10px;
+                        label{
+                            font-size: 11px !important;
+                        }
+                        label + .MuiInput-formControl-23 {
+                            margin-top: 10px;
+                        }
+                    }
+                    .selectControl{
+                        min-width: 105px;
+                        margin: 3px 0 0 15px;
+                    }
+                }
+            }
+        }
+        .tabs{
+            top: 135px;
+        }
+        #cuerpoEventos{
+            padding-top: 130px;
+            table{
+                .cardEvento{
+                    width: 90vw;
+                }
+            }
+            .mensajeSinRegistros{
+                margin-top: 20px;
+                line-height: 30px;
+            }
+            .botonAgregarEvento{
+                display:  block !important;
+                button{
+                    bottom: 80px;
+                    right: 20px;
+                }
+            }
+            .botonHabilitarEdicionEvento{
+                display:  block !important;
+                button{
+                    bottom: 80px;
+                    right: 90px;
+                }
+            }
+        }
+    }
+}

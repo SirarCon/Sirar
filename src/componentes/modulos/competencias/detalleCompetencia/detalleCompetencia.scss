@@ -1,0 +1,575 @@
+#contenedorCompetencia{
+    background-color: white;
+    width: 100%;
+    .infoGeneral{
+        background-color: white;
+        z-index: 1;
+        width: 100%;
+        position: fixed;
+        top: 60px;//112
+        height: 55px;      
+        div{
+            height: 55px !important;
+            margin: -0.7px !important;
+            div{
+                button{
+                    border-radius: 0 !important;
+                    background-color: $rojoPrincipal;
+                    color: white !important;
+                    height: 100% !important;
+                    width: 100% !important;
+                    padding: 0 !important;
+                    @extend .textoMuyPequenno;
+                    font-size: 11px !important;
+                    letter-spacing: 1px !important;
+                    &:hover{
+                        background-color: rgba(201, 29, 50, 0.9) !important;
+                    }
+                }
+            }
+        }
+    }
+    .tabs{
+        width: 100%;
+        position: fixed;
+        top: 237px;
+        &>div:first-child{
+            &>div:first-child{
+                &>div:first-child{
+                    background-color: white !important;
+                }
+                &>div:nth-child(2){
+                    &>div:first-child{
+                        background-color: $azulFuerte !important;
+                    }
+                }
+            }
+        }
+    }
+    #cuerpoCompetencia{
+        #infoCompetenciaContenedor{
+            #accionAtras, #cambiarEstado{
+                top: 110px;
+                position: fixed;
+                z-index: 11;
+                margin: 10px 0 0 20px;
+                width: 50px;
+                float: left;
+                height: 55px;
+                button{
+                    height: 100%;
+                    width: 100%;
+                    background-color: transparent;
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+                    i{
+                        font-size: 20px;
+                    }
+                }
+            }
+            #cambiarEstado{
+                right: 5px;
+            }
+            #tituloRefrescar{
+                position: fixed;
+                top: 195px;
+                right: -5px;
+                z-index: 11;
+                width: 150px;
+                color: white;
+                @extend .textoGrande;
+                text-transform: uppercase;
+                letter-spacing: 5px !important;
+                img{
+                    margin-top: 5px;
+                    width: 30px;
+                }
+                p{
+                    text-align: center;
+                    float: right;
+                    margin: 10px;
+                }
+            }
+            height: 100%;
+            width: 100%;
+            position: relative;
+            #infoCompetencia{
+                position: fixed;
+                top: 112px;
+                z-index: 10;
+                background-color: $azulPrincipal;
+                height: 125px;
+                //z-index: -1
+                width: 100vw;
+                #data{
+                    color: white;
+                    margin-left: 80px;
+                    #main{
+                        width: 70%;
+                        float: left;
+                        position: relative;
+                        top: 10px;
+                        #fecha{
+                            font-size: 13px !important;
+                        }
+                        #fecha, #recinto{
+                            text-transform: uppercase;
+                            letter-spacing: 5px !important;
+                            margin: 15px 0;
+                            font-size: 11px;
+                        }
+                        #desc{
+                            font-size: 12px;
+                            letter-spacing: 2px !important;
+                        }
+                    }
+                }
+                .masInfo{
+                    border: none;
+                    height: 40px;
+                    background-color: $azulPrincipal;
+                    border: 1px solid white;
+                    color: white;
+                    font-size: 10px;
+                    float: right;
+                    position: relative;
+                    top: 65px;
+                    right: 15px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px !important;
+                    &:hover{
+                        background-color: $azulFuerte;
+                    }
+                }
+            }
+        }
+        #redesEquipo{
+            background-color: $azulPrincipal;
+            margin: 7px 0 0 0;
+            width: 50px;
+            text-align: center;
+            position: fixed;
+            z-index: 10;
+            height: 47px;
+            #redesSociales{
+                margin-top: 12px !important;
+                a{
+                    color: white;
+                    .gold{
+                        color: $dorado;
+                    }       
+                }
+            }
+        }
+        width: 98vw;
+        padding-top: 170px;
+        background-color: white;
+        table{
+            border-spacing: 0;
+            margin: 0 auto;
+            margin-top: 100px;
+            td{
+                padding: 0;
+            }
+            .cardSkeleton{
+                border-width: 0px !important;
+            }
+            .cardParticipante{
+                background-color: white;
+                height: 60px;
+                width: 600px;
+                //margin: 10px; 
+                position: relative;
+                //border: 0px solid $azulRegular;
+                border-bottom: 1px solid $azulFuerte;
+                border-width: 2px;
+                cursor: pointer;
+                span{
+                    span{
+                        height: 100%;
+                        border-radius: 0;
+                        line-height: normal;
+                    }
+                }
+                #info{
+                    height: 100%;
+                    .imgCompetencia{
+                        float: left;
+                        height: 100%;
+                        width: 150px;
+                        text-align: center;
+                        background-color: white;
+                        img{
+                            background-color: white;
+                            height: 85%;
+                            max-width: 80%;
+                            margin: 5%;
+                        }
+                    }
+                    .datosParticipante{
+                        height: 100%;
+                        div{
+                            position: relative;
+                            height: fit-content;
+                            -ms-transform: translateY(-50%);
+                            transform: translateY(-50%);
+                            top: 50%;
+                            width: 90%;
+                            margin: 0 auto;
+                            #bandera{
+                                width: 50px;
+                            }
+                            #nombre{
+                                position: absolute;
+                                height: fit-content;
+                                -ms-transform: translateY(-50%);
+                                transform: translateY(-50%);
+                                top: 35%;
+                                left: 70px;
+                                width: 70%;
+                                @extend .textoMediano;
+                                margin: 2px auto;
+                            }
+                            #puntaje{
+                                width: 65px;
+                                height: 50px;
+                                background-color: $azulRegular;
+                                position: absolute;
+                                right: 0;
+                                p{
+                                    @extend .textoTitulo;
+                                    height: fit-content;
+                                    color: white;
+                                    margin: 2px auto;
+                                    width: 100%;
+                                    text-align: center;
+                                    position: absolute;
+                                    -ms-transform: translateY(-50%);
+                                    transform: translateY(-50%);
+                                    top: 40%;
+                                }
+                            }
+                            .gold{
+                                background-color: $dorado !important;
+                            }
+                        }
+                    }
+                }
+                button{
+                    position: absolute;
+                    top: 15px;
+                    right: -5px;
+                    height: 30px;
+                    width: 30px;
+                    background-color: $rojoPrincipal;
+                    color: white;
+                    border-radius: 50%; 
+                    border-color: $rojoPrincipal;
+                    outline: none;
+                    cursor: pointer;
+                    i{
+                        pointer-events: none;
+                    }
+                }
+            }
+            .cardRegistro{
+                background-color: white;
+                height: 110px;
+                width: 480px;
+                margin: 10px; 
+                position: relative;
+                border: 0px solid $azulFuerte;
+                border-width: 2px;
+                cursor: pointer;
+                span{
+                    span{
+                        height: 100%;
+                        border-radius: 0;
+                        line-height: normal;
+                    }
+                }
+                #info{
+                    height: 100%;
+                    .datosRegistro{
+                        height: 100%;
+                        background-color: $azulFuerte;
+                        width: 40%;
+                        float: left;
+                        div{
+                            position: relative;
+                            height: fit-content;
+                            -ms-transform: translateY(-50%);
+                            transform: translateY(-50%);
+                            top: 50%;
+                            width: 90%;
+                            margin: 0 auto;
+                            #bandera{
+                                width: 50px;
+                                margin-left: 5px;
+                            }
+                            #nombre{
+                                color: white;
+                                position: absolute;
+                                height: fit-content;
+                                -ms-transform: translateY(-50%);
+                                transform: translateY(-50%);
+                                top: 35%;
+                                left: 70px;
+                                width: 60%;
+                                @extend .textoMediano;
+                                margin: 2px auto;
+                            }
+                        }
+                    }
+                    .datosExtra{
+                        height: 100%;
+                        width: 60%;
+                        float: right;
+                        div{
+                            position: relative;
+                            height: fit-content;
+                            -ms-transform: translateY(-50%);
+                            transform: translateY(-50%);
+                            top: 50%;
+                            width: 90%;
+                            margin: 0 auto;
+                            p{
+                                text-align: left;
+                                color: $azulFuerte;
+                                @extend .textoPequenno;
+                                margin: 2px auto;
+                            }
+                            #ultimo{
+                                font-family: $fontBold !important;
+                            }
+                        }
+                    }
+                }
+                button{
+                    position: absolute;
+                    top: -12px;
+                    right: -12px;
+                    height: 30px;
+                    width: 30px;
+                    background-color: $rojoPrincipal;
+                    color: white;
+                    border-radius: 50%; 
+                    border-color: $rojoPrincipal;
+                    outline: none;
+                    cursor: pointer;
+                    i{
+                        pointer-events: none;
+                    }
+                }
+                &:hover{
+                    transform: scale(1.01);
+                }
+            }
+        }
+        .mensajeSinRegistros{
+            margin: 0;
+            line-height: calc(100vh - 350px);
+        }
+        .botonAgregarParticipante, .botonAgregarRegistro{
+            button{
+                background-color: $azulRegular !important;
+                opacity: 1;
+                position: fixed !important;
+                bottom: 50px;
+                right: 50px;
+                @extend .animacionScrollHeader;
+            }
+        }
+        .botonBorrarParticipante, .botonEditarRegistro{
+            button{
+                background-color: $rojoPrincipal !important;
+                opacity: 1;
+                position: fixed !important;
+                bottom: 50px;
+                right: 120px;
+                @extend .animacionScrollHeader;
+            }
+        }
+    }
+}
+
+#modalFormRegistro{
+    position:absolute;
+    z-index: -1000;
+    min-height: 100vh;
+    height: fit-content;
+    width: 100%;
+    max-width: 900px;
+    top:0;
+    left:0;
+    background-color: white;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+    border-right: 0 solid $azulFuerte;
+    .botonCerrarForm{
+        position: fixed;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+.abrirModalForm{
+    //z-index: 1500 !important;
+    z-index: 1299 !important;
+    transform: scale(1) !important;
+    border-right-width: 7px !important;
+}
+
+.cerrarModalForm{
+    z-index: -1000 !important;
+    transform: scale(0) !important;
+    border-right-width: 0px !important;
+}
+
+// tablet y teléfono (landscape y portrait)
+@media only screen and (max-width: 830px){
+    #modalFormRegistro{
+        margin-top: -70px;
+        border-right-width: 0px;
+    }
+    .abrirModalForm{
+        z-index: 2000 !important;
+    }
+    #contenedorCompetencia{
+        .botonAgregarParticipante, .botonAgregarRegistro{
+            display:  block !important;
+            button{
+                bottom: 80px !important;
+                right: 20px !important;
+            }
+        }
+        .botonBorrarParticipante, .botonEditarRegistro{
+            display:  block !important;
+            button{
+                bottom: 80px !important;
+                right: 90px !important;
+            }
+        }
+        .infoGeneral{
+            top: 70px;
+            height: 110px;
+        }
+        .tabs{
+            top: 300px;
+        }
+        #cuerpoCompetencia{
+            #redesEquipo{
+                right: 0;
+                margin-top: 78px !important;
+                width: 40px !important;
+            }
+            padding-top: 109px !important;
+            //padding-top: 53px !important;
+            #tituloRefrescar{
+                display: none;
+            }
+            table{
+                margin-top: 180px !important;
+                .cardParticipante, .cardRegistro{
+                    width: 90vw;
+                }
+                .cardParticipante{
+                    #info{
+                        .datosParticipante{
+                            div{
+                                #nombre{
+                                    width: 55% !important;
+                                }
+                            }
+                        }
+                    }
+                    button{
+                        right: -15px !important;
+                    }
+                }
+                .cardRegistro{
+                    height: 130px !important;
+                    .datosRegistro{
+                        width: 55% !important;
+                    }
+                    .datosExtra{
+                        width: 45% !important;
+                    }
+                }
+            }
+            .mensajeSinRegistros{
+                margin-top: 20px;
+                line-height: 30px;
+            }
+            .botonAgregarCompetencia{
+                display:  block !important;
+                button{
+                    bottom: 80px;
+                    right: 20px;
+                }
+            }
+            .botonHabilitarEdicionCompetencia{
+                display:  block !important;
+                button{
+                    bottom: 80px;
+                    right: 20px;
+                }
+            }
+            #logoEvento{
+                display: none !important;
+            }
+            #accionAtras{
+                margin-left: 2px !important;
+                margin-top: 8px !important;
+                top: 180px !important;
+            }
+            #cambiarEstado{
+                margin-left: 2px !important;
+                margin-top: 8px !important;
+                left: 0px;
+                top: 235px !important;
+            }
+            #infoCompetencia{
+                top: 180px !important;
+                #data{
+                    margin-left: 52px !important;
+                    #main{
+                        top: 8px !important;
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    #contenedorCompetencia{
+        #encabezadoCompetencia{
+            top: 224px !important;
+        }
+        .infoGeneral{
+            top: 122px;
+        }
+        .tabs{
+            top: 355px !important;
+        }
+        #cuerpoCompetencia{
+            padding-top: 159px !important;
+            #infoCompetencia{
+                top: 229px !important;
+            }
+            #accionAtras{
+                top: 225px !important;
+            }
+            #cambiarEstado{
+                top: 280px !important;
+            }
+        }
+    }
+}

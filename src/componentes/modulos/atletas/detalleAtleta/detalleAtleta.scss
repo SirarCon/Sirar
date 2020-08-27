@@ -1,0 +1,322 @@
+#contenedorDetalleAtleta{
+    background-color: transparent;
+    margin-top: 100px;
+    #accionAtras{
+        margin-left: 20px;
+        width: 50px;
+        float: left;
+        height: 55px;
+        button{
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            color: $azulPrincipal;
+            cursor: pointer;
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+    #tituloRefrescar{
+        width: calc(100% - 70px);
+        float: right;
+        & p{
+            text-align: right;
+            margin-right: 10px;
+            & a:first-child{
+                cursor: pointer;
+            }
+            & a:last-child{
+                cursor: default;
+            }
+        }
+    }
+    #cuerpoDetalleAtleta{
+        #encabezadoAtleta{
+            height: 100%;
+            width: 100%;
+            #imgBorder{
+                height: 150px;
+                width: 150px;
+                border-radius: 100%;
+                background-color: white;
+                position: relative;
+                float: left;
+                top: 20px;
+                left: 30px;
+                .cover{
+                    height: 140px;
+                    width: 140px;
+                    border-radius: 100%;
+                    margin: 5px;
+                }
+            }
+            #infoPersonalAtleta{
+                background-color: $azulPrincipal;
+                height: 190px;
+                z-index: -1;
+                width: 100vw;
+                margin-top: 115px;
+                #data{
+                    color: white;
+                    height: 160px;
+                    margin-left: 230px;
+                    #main{
+                        width: 70%;
+                        float: left;
+                        position: relative;
+                        top: 30px;
+                        & > p:first-child{
+                            font-size: 13px;
+                        }
+                        p{
+                            text-transform: uppercase;
+                            letter-spacing: 5px !important;
+                            margin: 15px 0;
+                            font-size: 11px;
+                        }
+                    }
+                    #pais{
+                        float: right;
+                        width: 30%;
+                        text-align: right;
+                        .bandera{
+                            height: auto;
+                            width: 100px;
+                            max-width: calc(100% - 1px);
+                            border: 0 solid white;
+                            border-width: 0 0 1px 1px;
+                        }
+                    }
+                }
+                .masInfo{
+                    border: none;
+                    width: 100px;
+                    height: 40px;
+                    background-color: $azulPrincipal;
+                    border: 1px solid white;
+                    color: white;
+                    font-size: 10px;
+                    float: right;
+                    position: relative;
+                    right: 10px;
+                    top: -25px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px !important;
+                    &:hover{
+                        background-color: $azulFuerte;
+                    }
+                }
+            }
+        }
+        #contenedorDerAtleta{
+            width: 100vw;
+            background-color: white;
+            .contenedorEvento{
+                //width: 90vw;
+                margin: 0 auto;
+                .nombreEvento{
+                    //text-align: center;
+                    @extend .textoGrande;
+                    //border-bottom: 2px solid $azulFuerte;
+                    color: $azulPrincipal;
+                    background-color: $azulMuyLiviano;
+                    padding: 15px 30px;
+                    margin: 0;
+                }
+            }
+            .mensajeSinRegistros{
+                margin: 0;
+                line-height: calc(100vh - 350px);
+            }
+            table{
+                border-spacing: 0;
+                margin: 0 auto;
+                td{
+                    padding: 0;
+                }
+                .cardSkeleton{
+                    border-width: 0px !important;
+                }
+                .cardCompetencia{
+                    background-color: white;
+                    height: 150px;
+                    width: 300px;
+                    margin: 10px; 
+                    position: relative;
+                    border: 0px solid $azulRegular;
+                    border-width: 2px;
+                    cursor: pointer;
+                    span{
+                        span{
+                            height: 100%;
+                            border-radius: 0;
+                            line-height: normal;
+                        }
+                    }
+                    #info{
+                        height: 100%;
+                        .imgCompetencia{
+                            float: left;
+                            height: 100%;
+                            width: 150px;
+                            text-align: center;
+                            background-color: white;
+                            img{
+                                background-color: white;
+                                height: 85%;
+                                max-width: 80%;
+                                margin: 5%;
+                            }
+                        }
+                        .datosCompetencia{
+                            height: 100%;
+                            div{
+                                position: relative;
+                                height: fit-content;
+                                -ms-transform: translateY(-50%);
+                                transform: translateY(-50%);
+                                top: 50%;
+                                p{
+                                    @extend .textoMediano;
+                                    width: 85%;
+                                    margin: 2px auto;
+                                    cursor: pointer;
+                                    line-height: 20px;
+                                }
+                            }
+                            #prueba, #fase{
+                                font-family: "RalewayBold" !important;
+                            }
+                            img{
+                                height: 20px;
+                                position: absolute;
+                                right: 2px;
+                                top: -10px;
+                            }
+                        }
+                        .datosCompetenciaW{
+                            @extend .datosCompetencia;
+                            width: 100%;
+                        }
+                    }
+                    button{
+                        position: absolute;
+                        top: -12px;
+                        right: -12px;
+                        height: 30px;
+                        width: 30px;
+                        background-color: $rojoPrincipal;
+                        color: white;
+                        border-radius: 50%; 
+                        border-color: $rojoPrincipal;
+                        outline: none;
+                        cursor: pointer;
+                        i{
+                            pointer-events: none;
+                        }
+                    }
+                    &:hover{
+                        transform: scale(1.01);
+                    }
+                }
+            }
+        }
+        #redesAtleta{
+            background-color: $azulPrincipal;
+            margin: -1px 0 0 30px;
+            width: 150px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            a{
+                color: white;
+                .gold{
+                    color: $dorado;
+                }       
+            }
+            .redDesactiva{
+                pointer-events: none;
+                color: $grisNormal !important;
+            }
+        }
+    }   
+}
+
+@media only screen and (max-width: 830px){
+    #contenedorDetalleAtleta{
+        #cuerpoDetalleAtleta{
+            #encabezadoAtleta{
+                #imgBorder{
+                    top: 30px;
+                    height: 80px;
+                    width: 80px;
+                    left: 20px;
+                    .cover{
+                        height: 70px;
+                        width: 70px;
+                    }
+                }
+                #infoPersonalAtleta{
+                    margin-top: 125px;
+                    height: 140px;
+                    #data{
+                        margin-left: 120px;
+                        #main{
+                            top: 12px;
+                            & > p:first-child{
+                                font-size: 12px;
+                            }
+                            p{
+                                margin: 10px 0;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                    .masInfo{
+                        top: -59px;
+                        width: 65px;
+                        right: 0px;
+                    }
+                }
+            }
+            #redesAtleta{
+                margin-left: 0;
+                width: 120px;
+                border-radius: 0 0 20px 0;
+            }
+            .mensajeSinRegistros{
+                margin-top: 100px !important;
+                line-height: 30px !important;
+            }
+        }
+    }
+    .atletaMasDetalle{
+        & > div:first-child > div:first-child{
+            width: 100% !important;
+            max-width: 100% !important;
+            transform: translate(0px, -15px) !important;
+        }
+        & > div:first-child > div:first-child > div:first-child > div:first-child{
+            height: 100vh !important;
+            max-height: 100vh !important;
+            overflow: auto !important;
+        }
+    }
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    #contenedorDetalleAtleta{
+        #cuerpoDetalleAtleta{
+            #encabezadoAtleta{
+                #infoPersonalAtleta{
+                    margin-top: 175px;
+                }
+            }
+        }
+    }
+}

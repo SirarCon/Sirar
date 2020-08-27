@@ -1,0 +1,83 @@
+footer{
+    border-top: 1px solid $rojoPrincipal;
+    background-color: white;
+    bottom: 0;
+    color: white;
+    position: fixed;
+    width: 100vw; 
+    height: 100%;
+    top: calc( 100% - 35px);
+    left: 0px;
+    z-index: 50;
+    a{
+        text-decoration: none;
+        color: $rojoPrincipal;
+    }
+    #redesSociales{
+        width: 250px;
+        float: left;
+        font-size: 0.9rem;
+        margin: 0;
+        div{
+            text-align: center;
+            line-height: 35px;
+        }
+    }
+    #unaInfo{
+        width: 500px;
+        float: right;
+        margin: 0;
+        & > div:first-child{
+            width: 65% !important;
+        }
+        & > div:last-child{
+            width: 35% !important;
+            background-color: $rojoPrincipal;
+        }
+        #desarrolloInfo{
+            text-align: right;
+            margin-top: 7px;
+            margin-right: 15px;
+            color: $rojoPrincipal;
+            font-weight: bold;
+            letter-spacing: 2px;
+            p{
+                margin: 0;
+                @extend .textoMuyPequenno;
+            }
+        }
+        #una{
+            text-align: center;
+            padding: 0;
+            height: 35px;
+            img{
+                height: 30px;
+                margin-top: 2.5px;
+            }
+        }
+    }
+}
+
+// teléfonos pequeños
+@media only screen and (max-width: 830px) {
+    footer{
+        border-top: none !important;
+        top: calc( 100% - 70px);
+        #redesSociales{
+            width: 100vw !important;
+        }
+        #unaInfo{
+            width: 100vw !important;
+            float: left !important;
+            & > div:first-child{
+                border-top: 1px solid $rojoPrincipal !important;
+            }
+            #desarrolloInfo{
+                letter-spacing: 1px !important;
+                font-size: 7px !important;
+                margin-right: 2px !important;
+                text-align: center !important;
+            }
+        }
+    }
+}

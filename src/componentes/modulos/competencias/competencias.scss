@@ -1,0 +1,439 @@
+#contenedorCompetencias{
+    background-color: white;
+    width: 100%;
+    #encabezadoCompetencias{
+        top: 112px;
+        border-bottom: 2px solid $rojoPrincipal;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        @extend .textoGrande;
+        text-transform: uppercase;
+        letter-spacing: 5px !important;
+        color: $azulPrincipal;
+        text-align: center;
+        background-color: white !important;
+        #accionAtras{
+            margin-left: 20px;
+            width: 50px;
+            float: left;
+            height: 55px;
+            button{
+                height: 100%;
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                color: $azulPrincipal;
+                cursor: pointer;
+                i{
+                    font-size: 20px;
+                }
+            }
+        }
+        #tituloRefrescar{
+            float: right;
+            width: 200px;
+            p{
+                text-align: right;
+                margin-right: 10px;
+                float: right;
+                text-align: left;
+            }
+        }
+        & > div{
+            box-shadow: none !important;
+            width: 30%;
+            float: left;
+            margin: 0px auto 0 15px;
+        }
+        .barraBusquedaCompetencias{
+            border: 0px solid $rojoPrincipal;
+            div{
+                line-height: 20px !important;
+                font-family: $fontRegular !important;
+                font-size: 0.8rem !important;
+                letter-spacing: 1px !important;
+                text-transform: capitalize;
+            }
+            input{
+                margin-top: 6px !important;
+                height: 80% !important;
+                font-family: $fontRegular !important;
+                font-size: 0.8rem !important;
+                letter-spacing: 1px !important;
+            }
+        }
+        #filters{
+            position: absolute;
+            top: 8px;
+            width: 240px;
+            left: 32%;
+            height: 45px;
+            margin: 0;
+            border: 0px solid $rojoPrincipal;
+            border-width: 0 0 0 1px;
+            .form{
+                display: flex;
+                flex-wrap: wrap;
+                width: fit-content;
+                margin: 0 auto;
+                &>div:last-child{
+                    top: -4px;
+                }
+                .selectControl{
+                    min-width: 150px;
+                    margin: 15px 20px;
+                    label{
+                        font-size: 11px !important;
+                    }
+                }
+            }
+        }
+    }
+    .infoGeneral{
+        background-color: white;
+        z-index: 1;
+        width: 100%;
+        position: fixed;
+        top: 60px;//112
+        height: 55px;      
+        div{
+            height: 55px !important;
+            margin: -0.7px !important;
+            div{
+                button{
+                    border-radius: 0 !important;
+                    background-color: $rojoPrincipal;
+                    color: white !important;
+                    height: 100% !important;
+                    width: 100% !important;
+                    padding: 0 !important;
+                    @extend .textoMuyPequenno;
+                    font-size: 11px !important;
+                    letter-spacing: 1px !important;
+                    &:hover{
+                        background-color: rgba(201, 29, 50, 0.9) !important;
+                    }
+                }
+            }
+        }
+    }
+    .tabs{
+        width: 100%;
+        position: fixed;
+        top: 168px;//162px;
+        &>div:first-child{
+            &>div:first-child{
+                &>div:first-child{
+                    background-color: white !important;
+                }
+                &>div:nth-child(2){
+                    &>div:first-child{
+                        background-color: $azulFuerte !important;
+                    }
+                }
+            }
+        }
+    }
+    #cuerpoCompetencias{
+        width: 100vw;
+        padding-top: 170px;
+        background-color: white;
+        table{
+            border-spacing: 0;
+            margin: 0 auto;
+            td{
+                padding: 0;
+            }
+            .cardSkeleton{
+                border-width: 0px !important;
+            }
+            .cardCompetencia{
+                background-color: white;
+                height: 130px;
+                width: 300px;
+                margin: 10px; 
+                position: relative;
+                border: 0px solid $azulRegular;
+                border-width: 2px;
+                cursor: pointer;
+                span{
+                    span{
+                        height: 100%;
+                        border-radius: 0;
+                        line-height: normal;
+                    }
+                }
+                #info{
+                    height: 100%;
+                    .imgCompetencia{
+                        float: left;
+                        height: 100%;
+                        width: 150px;
+                        text-align: center;
+                        background-color: white;
+                        img{
+                            background-color: white;
+                            height: 85%;
+                            max-width: 80%;
+                            margin: 5%;
+                        }
+                    }
+                    .datosCompetencia{
+                        height: 100%;
+                        div{
+                            position: relative;
+                            height: fit-content;
+                            -ms-transform: translateY(-50%);
+                            transform: translateY(-50%);
+                            top: 50%;
+                            p{
+                                @extend .textoMediano;
+                                width: 85%;
+                                margin: 2px auto;
+                                cursor: pointer;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                    .datosCompetenciaW{
+                        @extend .datosCompetencia;
+                        width: 100%;
+                    }
+                }
+                button{
+                    position: absolute;
+                    top: -12px;
+                    right: -12px;
+                    height: 30px;
+                    width: 30px;
+                    background-color: $rojoPrincipal;
+                    color: white;
+                    border-radius: 50%; 
+                    border-color: $rojoPrincipal;
+                    outline: none;
+                    cursor: pointer;
+                    i{
+                        pointer-events: none;
+                    }
+                }
+                &:hover{
+                    transform: scale(1.01);
+                }
+            }
+            .cardCompetencia1{
+                background-color: white;
+                height: 50px;
+                width: 200px;
+                margin: 10px; 
+                position: relative;
+                border: 2px solid $azulRegular;
+                span{
+                    span{
+                        height: 100%;
+                        border-radius: 0;
+                        line-height: normal;
+                    }
+                }
+                #info{
+                    #nombre{
+                        @extend .textoMediano;
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        left: 0;
+                        height: fit-content;
+                        -ms-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                        margin: auto 0;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                }
+                button{
+                    position: absolute;
+                    top: -12px;
+                    right: -12px;
+                    height: 30px;
+                    width: 30px;
+                    background-color: $rojoPrincipal;
+                    color: white;
+                    border-radius: 50%; 
+                    border-color: $rojoPrincipal;
+                    outline: none;
+                    cursor: pointer;
+                    i{
+                        pointer-events: none;
+                    }
+                }
+                &:hover{
+                    transform: scale(1.01);
+                }
+            }
+            .desactivo{
+                opacity: 0.4;
+            }
+        }
+        .mensajeSinRegistros{
+            margin: 0;
+            line-height: calc(100vh - 350px);
+        }
+        .botonAgregarCompetencia{
+            button{
+                background-color: $azulRegular !important;
+                opacity: 1;
+                position: fixed !important;
+                bottom: 50px;
+                right: 50px;
+                @extend .animacionScrollHeader;
+            }
+        }
+        .botonHabilitarEdicionCompetencia{
+            button{
+                background-color: $rojoPrincipal !important;
+                opacity: 1;
+                position: fixed !important;
+                bottom: 50px;
+                right: 50px;
+                @extend .animacionScrollHeader;
+            }
+        }
+    }
+}
+
+#modalFormCompetencia{
+    position:absolute;
+    z-index: -1000;
+    min-height: 100vh;
+    height: fit-content;
+    width: 100%;
+    max-width: 900px;
+    top:0;
+    left:0;
+    background-color: white;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+    border-right: 0 solid $azulFuerte;
+    .botonCerrarForm{
+        position: fixed;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+.abrirModalForm{
+    //z-index: 1500 !important;
+    z-index: 1299 !important;
+    transform: scale(1) !important;
+    border-right-width: 7px !important;
+}
+
+.cerrarModalForm{
+    z-index: -1000 !important;
+    transform: scale(0) !important;
+    border-right-width: 0px !important;
+}
+
+// tablet y teléfono (landscape y portrait)
+@media only screen and (max-width: 830px){
+    #modalFormCompetencia{
+        margin-top: -70px;
+        border-right-width: 0px;
+    }
+    .abrirModalForm{
+        z-index: 2000 !important;
+    }
+    #contenedorCompetencias{
+        #encabezadoCompetencias{
+            top: 174px !important;
+            #tituloRefrescar{
+                display: none;
+            }
+            & > div{
+                width: 70%;
+                margin: 0;
+            }
+            .botonBusqAvanzada{
+                //width: 25% !important;
+                min-width: 0px !important;
+            }
+            #filters{
+                width: 40%;
+                left: auto;
+                right: 0;
+                .form{
+                    margin: 0 10px;
+                    .formControl{
+                        min-width: 120px;
+                        margin: 3px 10px;
+                        label{
+                            font-size: 11px !important;
+                        }
+                        label + .MuiInput-formControl-23 {
+                            margin-top: 10px;
+                        }
+                    }
+                    .selectControl{
+                        min-width: 105px;
+                        margin: 3px 0 0 15px;
+                    }
+                }
+            }
+        }
+        .tabs{
+            top: 232px;
+        }
+        .infoGeneral{
+            top: 70px;
+            height: 110px;
+        }
+        #cuerpoCompetencias{
+            padding-top: 220px;
+            table{
+                .cardCompetencia{
+                    width: 90vw;
+                }
+            }
+            .mensajeSinRegistros{
+                margin-top: 20px;
+                line-height: 30px;
+            }
+            .botonAgregarCompetencia{
+                display:  block !important;
+                button{
+                    bottom: 80px;
+                    right: 20px;
+                }
+            }
+            .botonHabilitarEdicionCompetencia{
+                display:  block !important;
+                button{
+                    bottom: 80px;
+                    right: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    #contenedorCompetencias{
+        #encabezadoCompetencias{
+            top: 224px !important;
+        }
+        .tabs{
+            top: 281px !important;
+        }
+        .infoGeneral{
+            top: 122px;
+        }
+        #cuerpoCompetencias{
+            padding-top: 269px;
+        }
+    }
+}

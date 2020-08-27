@@ -1,0 +1,223 @@
+#contenedorDeportes{
+    background-color: white;
+    width: 100%;
+    #encabezadoDeportes{
+        border-bottom: 2px solid $rojoPrincipal;
+        #tituloRefrescar{
+            float: right;
+            width: 200px;
+            p{
+                margin: 0 10px 0 0;
+                line-height: 48px;
+                float: right;
+                text-align: left;
+            }
+        }
+        & > div{
+            box-shadow: none !important;
+            width: 30%;
+            float: left;
+            margin: 0px auto 0 15px;
+        }
+        .barraBusquedaDeportes{
+            margin-left: 3vw !important;
+            div{
+                line-height: 20px !important;
+                font-family: $fontRegular !important;
+                font-size: 0.8rem !important;
+                letter-spacing: 1px !important;
+                text-transform: capitalize;
+            }
+            input{
+                margin-top: 6px !important;
+                height: 80% !important;
+                font-family: $fontRegular !important;
+                font-size: 0.8rem !important;
+                letter-spacing: 1px !important;
+            }
+        }
+    }
+    #cuerpo{
+        width: 100vw;
+        padding-top: 65px;
+        background-color: white;
+        table{
+            border-spacing: 0;
+            margin: 0 auto;
+            td{
+                padding: 0;
+            }
+            .cardSkeleton{
+                border-width: 0px !important;
+            }
+            .cardDeporte{
+                background-color: white;
+                height: 50px;
+                width: 200px;
+                margin: 10px; 
+                position: relative;
+                border: 2px solid $azulRegular;
+                span{
+                    span{
+                        height: 100%;
+                        border-radius: 0;
+                        line-height: normal;
+                    }
+                }
+                #info{
+                    #nombre{
+                        @extend .textoMediano;
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        left: 0;
+                        height: fit-content;
+                        -ms-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                        margin: auto 0;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                }
+                button{
+                    position: absolute;
+                    top: -12px;
+                    right: -12px;
+                    height: 30px;
+                    width: 30px;
+                    background-color: $rojoPrincipal;
+                    color: white;
+                    border-radius: 50%; 
+                    border-color: $rojoPrincipal;
+                    outline: none;
+                    cursor: pointer;
+                    i{
+                        pointer-events: none;
+                    }
+                }
+                &:hover{
+                    transform: scale(1.01);
+                }
+            }
+            .desactivo{
+                opacity: 0.4;
+            }
+        }
+        .mensajeSinRegistros{
+            margin: 0;
+            line-height: calc(100vh - 150px);
+        }
+        .botonAgregarDeporte{
+            button{
+                background-color: $azulRegular !important;
+                opacity: 1;
+                position: fixed !important;
+                bottom: 50px;
+                right: 50px;
+                @extend .animacionScrollHeader;
+            }
+        }
+        .botonHabilitarEdicionDeporte{
+            button{
+                background-color: $rojoPrincipal !important;
+                opacity: 1;
+                position: fixed !important;
+                bottom: 50px;
+                right: 120px;
+                @extend .animacionScrollHeader;
+            }
+        }
+    }
+}
+
+#modalFormDeporte{
+    position:absolute;
+    z-index: -1000;
+    min-height: 100vh;
+    height: fit-content;
+    width: 100%;
+    max-width: 900px;
+    top:0;
+    left:0;
+    background-color: white;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+    border-right: 0 solid $azulFuerte;
+    .botonCerrarForm{
+        position: fixed;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+.abrirModalForm{
+    z-index: 1500 !important;
+    transform: scale(1) !important;
+    border-right-width: 7px !important;
+}
+
+.cerrarModalForm{
+    z-index: -1000 !important;
+    transform: scale(0) !important;
+    border-right-width: 0px !important;
+}
+
+// tablet y teléfono (landscape y portrait)
+@media only screen and (max-width: 830px){
+    #modalFormDeporte{
+        margin-top: -70px;
+        border-right-width: 0px;
+    }
+    .abrirModalForm{
+        z-index: 2000 !important;
+    }
+    #contenedorDeportes{
+        #encabezadoDeportes{
+            #tituloRefrescar{
+                display: none;
+            }
+            & > div{
+                width: 100%;
+                margin: 0;
+            }
+        }
+        #cuerpo{
+            table{
+                .cardDeporte{
+                    width: 90vw;
+                }
+            }
+            .mensajeSinRegistros{
+                margin-top: 20px;
+                line-height: 30px;
+            }
+            .botonAgregarDeporte{
+                display:  block !important;
+                button{
+                    bottom: 80px;
+                    right: 20px;
+                }
+            }
+            .botonHabilitarEdicionDeporte{
+                display:  block !important;
+                button{
+                    bottom: 80px;
+                    right: 90px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    #contenedorDeportes{
+        #cuerpo{
+            padding-top: 105px !important;
+        }
+    }
+}
+

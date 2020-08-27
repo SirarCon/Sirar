@@ -1,0 +1,107 @@
+.alertaBottom{
+    left: 10px;
+    bottom: 35px;
+    z-index: 3000;
+    position: fixed;
+    margin-right: 10px;
+    display: none;
+    & > div:first-child{
+        text-align: center;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 5px 5px 0 0;
+        height: fit-content;
+        width: fit-content;
+        min-width: 200px;
+        color: white;
+        padding: 13px 20px;
+        @extend .textoRegular;
+        #iconoTipoAlerta{
+            width: 30px;
+        }
+    }
+}
+
+#alerta{
+    @extend .alertaBottom;
+}
+
+#alertaPush{
+    @extend .alertaBottom;
+    //@extend .alertaInfo;
+    top: 0 !important;
+    bottom: auto !important;
+    & > div:first-child{
+        text-align: left;
+        min-height: 40px;
+        max-height: 100px !important;
+        border-radius: 0 0 5px 5px !important;
+        span{
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }
+    .cerrar{
+        i{
+            color: white;
+            margin-top: 4px;
+        }
+        text-align: center;
+        height: 25px;
+        width: 25px;
+        background-color: transparent;
+        top: 5px;
+        position: absolute;
+        right: 3px;
+    }
+    .ir{
+        i{
+            color: white;
+            bottom: 10px;
+            position: absolute;
+            right: 10px;
+        }
+        height: calc(100% - 30px);
+        width: 100%;
+        bottom: 0;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.alertaExito{
+    & > div:first-child{
+        border-color: $verdeExito;
+        background-color: $verdeExito;
+    }
+}
+
+.alertaInfo{
+    & > div:first-child{
+        border-color: $azulLiviano;
+        background-color: $azulLiviano;
+    }
+}
+
+.alertaError{
+    & > div:first-child{
+        border-color: $rojoPrincipal;
+        background-color: $rojoPrincipal;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .alertaBottom{
+        left: 0 !important;
+        bottom: 0px !important;
+        width: 100vw !important;
+        & > div:first-child{
+            border-radius: 0px !important;
+            width: 100vw;
+            padding: 13px 0;
+        }
+    }
+    #alertaPush{
+        bottom: auto !important;
+    }
+}

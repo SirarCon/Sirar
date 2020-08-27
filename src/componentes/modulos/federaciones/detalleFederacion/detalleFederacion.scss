@@ -1,0 +1,248 @@
+#contenedorDetalleFederacion{
+    background-color: transparent;
+    margin-top: 100px;
+    #accionAtras{
+        margin-left: 20px;
+        width: 50px;
+        float: left;
+        height: 55px;
+        button{
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            color: $azulPrincipal;
+            cursor: pointer;
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+    #tituloRefrescar{
+        width: calc(100% - 70px);
+        float: right;
+        & p{
+            text-align: right;
+            margin-right: 10px;
+            & a:first-child{
+                cursor: pointer;
+            }
+            & a:last-child{
+                cursor: default;
+            }
+        }
+    }
+    #cuerpoDetalleFederacion{
+        #encabezadoFederacion{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            #imgBorder{
+                height: fit-content;
+                width: fit-content;
+                background-color: white;
+                float: left;
+                left: 30px;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                .cover{
+                    max-height: 140px;
+                    height: auto;
+                    width: 140px;
+                    border-radius: 100%;
+                    margin: 5px;
+                }
+            }
+            #infoPersonalFederacion{
+                background-color: $azulPrincipal;
+                height: 150px;
+                z-index: -1;
+                width: 100vw;
+                margin-top: 115px;
+                #data{
+                    color: white;
+                    height: 160px;
+                    margin-left: 230px;
+                    #main{
+                        width: 70%;
+                        float: left;
+                        position: relative;
+                        top: 30%;
+                        & > p:first-child{
+                            font-size: 13px;
+                        }
+                        p{
+                            text-transform: uppercase;
+                            letter-spacing: 5px !important;
+                            margin: 15px 0;
+                            font-size: 11px;
+                        }
+                        a{
+                            color: white !important;
+                            text-transform: lowercase;
+                        }
+                    }
+                }
+                .fedSinFoto{
+                    margin-left: 50px !important;
+                }
+                .masInfo{
+                    border: none;
+                    width: 100px;
+                    height: 40px;
+                    background-color: $azulPrincipal;
+                    border: 1px solid white;
+                    color: white;
+                    font-size: 10px;
+                    float: right;
+                    position: relative;
+                    right: 10px;
+                    top: -65px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px !important;
+                    &:hover{
+                        background-color: $azulFuerte;
+                    }
+                }
+            }
+        }
+        #contenedorDerFederacion{
+            margin-top: 50px;
+            height: 100%;
+            width: 100%;
+            #infoDeportesFederacion{
+                table{
+                    border-spacing: 0;
+                    margin: 0 auto;
+                    td{
+                        padding: 0;
+                    }
+                    .cardSkeleton{
+                        border-width: 0px !important;
+                    }
+                    .cardDeporte{
+                        background-color: white;
+                        height: 50px;
+                        width: 200px;
+                        margin: 10px; 
+                        position: relative;
+                        border: 2px solid $azulRegular;
+                        span{
+                            span{
+                                height: 100%;
+                                border-radius: 0;
+                                line-height: normal;
+                            }
+                        }
+                        #info{
+                            #nombre{
+                                @extend .textoMediano;
+                                position: absolute;
+                                top: 50%;
+                                right: 0;
+                                left: 0;
+                                height: fit-content;
+                                -ms-transform: translateY(-50%);
+                                transform: translateY(-50%);
+                                margin: auto 0;
+                                text-align: center;
+                                cursor: pointer;
+                            }
+                        }
+                        &:hover{
+                            transform: scale(1.01);
+                        }
+                    }
+                }
+                .mensajeSinRegistros{
+                    margin: 0;
+                    line-height: calc(100vh - 450px);
+                }
+            }
+        }
+    }   
+}
+
+@media only screen and (max-width: 830px){
+    #contenedorDetalleFederacion{
+        #cuerpoDetalleFederacion{
+            #encabezadoFederacion{
+                #imgBorder{
+                    left: 20px;
+                    .cover{
+                        max-height: 70px;
+                        width: 70px;
+                    }
+                }
+                #infoPersonalFederacion{
+                    margin-top: 120px;
+                    height: 140px;
+                    #data{
+                        margin-left: 120px;
+                        #main{
+                            width: 100%;
+                            top: 23px;
+                            & > p:first-child{
+                                font-size: 12px;
+                            }
+                            p{
+                                margin: 10px 0;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                    .masInfo{
+                        top: -69px;
+                        width: 90px;
+                        right: 0px;
+                    }
+                }
+            }
+            #contenedorDerFederacion{
+                margin-top: 10px !important;
+                #infoDeportesFederacion{
+                    table{
+                        .cardDeporte{
+                            width: 90vw !important;
+                        }
+                    }
+                    .mensajeSinRegistros{
+                        margin-top: 50px;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .federacionMasDetalle{
+        & > div:first-child > div:first-child{
+            width: 100% !important;
+            max-width: 100% !important;
+            transform: translate(0px, -15px) !important;
+        }
+        & > div:first-child > div:first-child > div:first-child > div:first-child{
+            height: 100vh !important;
+            max-height: 100vh !important;
+            overflow: auto !important;
+        }
+    }
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    #contenedorDetalleFederacion{
+        #cuerpoDetalleFederacion{
+            #encabezadoFederacion{
+                #infoPersonalFederacion{
+                    margin-top: 170px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,395 @@
+#contenedorEquipos{
+    background-color: white;
+    width: 100%;
+    #encabezadoEquipos{
+        //border-bottom: 2px solid $rojoPrincipal;
+        #tituloRefrescar{
+            float: right;
+            width: 200px;
+            p{
+                //width: calc(50vw + 58px);
+                margin: 0 10px 0 0;
+                line-height: 48px;
+                float: right;
+                text-align: left;
+            }
+        }
+        & > div{
+            box-shadow: none !important;
+            width: 30%;
+            float: left;
+            margin: 0px auto 0 15px;
+        }
+        .barraBusquedaEquipos{
+            margin-left: 3vw !important;
+            div{
+                line-height: 20px !important;
+                font-family: $fontRegular !important;
+                font-size: 0.8rem !important;
+                letter-spacing: 1px !important;
+                text-transform: capitalize;
+            }
+            input{
+                margin-top: 6px !important;
+                height: 80% !important;
+                font-family: $fontRegular !important;
+                font-size: 0.8rem !important;
+                letter-spacing: 1px !important;
+            }
+        }
+        .botonBusqAvanzada{
+            width: 200px !important;
+            button{
+                height: 50px !important;
+                font-family: $fontMedium !important;
+                &:hover, &:active{
+                    div{
+                        background-color: white !important;
+                        opacity: 0.8;
+                    }
+                }
+                div{
+                    div{
+                        border: 0px solid $rojoPrincipal;
+                        border-width: 0 0 0 1px;
+                        span{
+                            text-transform: capitalize !important;
+                            font-size: 11px !important;
+                            letter-spacing: 2px !important;
+                        }
+                    }
+                }
+            }
+            i{
+                transform: scale(1.5);
+                color: $azulFuerte;
+            }
+        }
+        #filters{
+            position: absolute;
+            top: 50px;
+            width: 90%;
+            left: 5%;
+            height: 100px;
+            transform: scale(0);
+            opacity: 0;
+            margin: 0;
+            .form{
+                display: flex;
+                flex-wrap: wrap;
+                width: fit-content;
+                margin: 0 auto;
+                .selectControl{
+                    min-width: 150px;
+                    margin: 15px 20px;
+                    label{
+                        font-size: 11px !important;
+                    }
+                }
+            }
+            select{
+                pointer-events: none;
+            }
+        }
+    }
+    #cuerpoEquipos{
+        width: 100vw;
+        padding-top: 50px;
+        background-color: white;
+        #encabezadoEventoEquipos{
+            width: 100%;
+            height: 70px;
+            background-color: $azulFuerte;
+            position: relative;
+            #imgBorder{
+                height: 100%;
+                width: fit-content;
+                margin-left: 20px;
+                .cover{
+                    margin-top: 10px;
+                    height: 50px;
+                    max-width: 60px;
+                }
+            }
+            p{
+                position: absolute;
+                height: fit-content;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                top: 50%;
+                color: white;
+                margin: 0 10%;
+                text-align: center;
+                width: 80%;
+                @extend .textoGrande;
+            }
+        }
+        table{
+            border-spacing: 0;
+            margin: 0 auto;
+            td{
+                padding: 0;
+            }
+            .cardInfo{
+                background-color: white;
+                border: 2px solid $azulRegular;
+                @extend .card;
+            }
+            .card{
+                //background-image: url("../assets/instalaciones3.jpeg");
+                //background-size: cover;
+                height: 80px;
+                width: 300px;
+                margin: 25px; 
+                position: relative;
+                span{
+                    span{
+                        height: 100%;
+                        border-radius: 0;
+                        line-height: normal;
+                    }
+                }
+                #info{
+                    position: absolute;
+                    height: fit-content;
+                    -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    margin-right: 10px;
+                    top: 40%;
+                    //position: absolute;
+                    //bottom: 0;
+                    right: 0;
+                    //height: 80px;
+                    text-align: right;
+                    text-transform: capitalize;
+                    width: 85%;
+                    #nombre{
+                        @extend .textoMediano;
+                        margin: 12px 10px 0 0;
+                    }
+                    #deporte, #genero{
+                        @extend .textoPequenno;
+                        margin: 3px 10px 0 0;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                    }
+                    p{
+                        margin: 2px auto;
+                        cursor: pointer;
+                    }
+                }
+                .bandera{
+                    height: 20px;
+                    width: 30px;
+                    position: absolute;
+                    bottom: 15px;
+                    left: 10px;
+                }
+                .cover{
+                    height: 200px;
+                    width: auto;
+                    margin: 0 auto;
+                    max-width: 300px;
+                }
+                button{
+                    position: absolute;
+                    top: -12px;
+                    right: -12px;
+                    height: 35px;
+                    width: 35px;
+                    background-color: $rojoPrincipal;
+                    color: white;
+                    border-radius: 50%; 
+                    border-color: $rojoPrincipal;
+                    outline: none;
+                    cursor: pointer;
+                    i{
+                        pointer-events: none;
+                    }
+                }
+                &:hover{
+                    transform: scale(1.01);
+                }
+            }
+            .desactivo{
+                opacity: 0.4;
+            }
+        }
+        .mensajeSinRegistros{
+            margin: 0;
+            line-height: calc(80vh - 150px);
+        }
+        .botonAgregarEquipo{
+            button{
+                background-color: $azulRegular !important;
+                opacity: 1;
+                position: fixed !important;
+                bottom: 50px;
+                right: 120px;
+                @extend .animacionScrollHeader;
+            }
+        }
+        .botonHabilitarEdicionEquipo{
+            button{
+                background-color: $rojoPrincipal !important;
+                opacity: 1;
+                position: fixed !important;
+                bottom: 50px;
+                right: 190px;
+                @extend .animacionScrollHeader;
+            }
+        }
+        .botonCambiarEvento{
+            button{
+                background-color: $verdeExito !important;
+                opacity: 1;
+                position: fixed !important;
+                bottom: 50px;
+                right: 50px;
+                @extend .animacionScrollHeader;
+            }
+        }
+    }
+}
+
+#modalFormEquipo{
+    position:absolute;
+    z-index: -1000;
+    min-height: 100vh;
+    height: fit-content;
+    width: 100%;
+    max-width: 900px;
+    top:0;
+    left:0;
+    background-color: white;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+    border-right: 0 solid $azulFuerte;
+    .botonCerrarForm{
+        position: fixed;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+.abrirModalForm{
+    z-index: 1500 !important;
+    transform: scale(1) !important;
+    border-right-width: 7px !important;
+}
+
+.cerrarModalForm{
+    z-index: -1000 !important;
+    transform: scale(0) !important;
+    border-right-width: 0px !important;
+}
+
+// tablet y teléfono (landscape y portrait)
+@media only screen and (max-width: 830px){
+    #modalFormEquipo{
+        margin-top: -70px;
+        border-right-width: 0px;
+    }
+    .abrirModalForm{
+        z-index: 2000 !important;
+    }
+    #contenedorEquipos{
+        #encabezadoEquipos{
+            #tituloRefrescar{
+                display: none;
+            }
+            & > div{
+                width: 75%;
+                margin: 0;
+            }
+            .botonBusqAvanzada{
+                width: 25% !important;
+                min-width: 0px !important;
+            }
+            #filters{
+                width: 100%;
+                left: 0;
+                .form{
+                    .formControl{
+                        min-width: 120px;
+                        margin: 3px 10px;
+                        label{
+                            font-size: 11px !important;
+                        }
+                        label + .MuiInput-formControl-23 {
+                            margin-top: 10px;
+                        }
+                    }
+                    .selectControl{
+                        //min-width: 105px;
+                        width: 40% !important;
+                        margin: 3px 0 0 5px;
+                    }
+                }
+            }
+        }
+        #encabezadoEventoEquipos{
+            p{
+                margin: 0 !important;
+                text-align: right !important;
+                width: 75% !important;
+                right: 5px !important;
+            }
+        }
+        #cuerpoEquipos{
+            table{
+                .card{
+                    //height: 200px;
+                    width: 95vw !important;
+                    max-width: 350px;
+                    margin: 10px 0 0 0 !important;
+                    button{
+                        top: 0px;
+                        right: 0px;
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 0 0 0 20%; 
+                    }
+                }
+            }
+            .mensajeSinRegistros{
+                margin-top: 20px;
+                line-height: 30px;
+            }
+            .botonAgregarEquipo{
+                display:  block !important;
+                button{
+                    bottom: 80px;
+                    right: 90px;
+                }
+            }
+            .botonHabilitarEdicionEquipo{
+                display:  block !important;
+                button{
+                    bottom: 80px;
+                    right: 160px;
+                }
+            }
+            .botonCambiarEvento{
+                display:  block !important;
+                button{
+                    bottom: 80px;
+                    right: 20px;
+                }
+            }
+        }
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    #contenedorEquipos{
+        #cuerpoEquipos{
+            padding-top: 102px;
+        }
+    }
+}

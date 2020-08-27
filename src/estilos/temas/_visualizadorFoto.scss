@@ -1,0 +1,15 @@
+.fotoOverlay{
+    background-color: rgba($color: black, $alpha: 0.9) !important;
+}
+.fotoModal{
+    text-align: center !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    & > div{
+        background-color: black !important;
+    }
+    img{
+        max-width: 100% !important;
+        max-height: 60vh !important;
+    }
+}
